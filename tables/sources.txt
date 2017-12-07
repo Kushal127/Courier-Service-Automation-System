@@ -1,0 +1,2 @@
+create table sources(sid number(5) primary key,sname varchar2(20) unique,state varchar2(20))
+/

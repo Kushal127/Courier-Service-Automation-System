@@ -1,0 +1,5 @@
+create table source_dest(
+source varchar2(20) primary key,
+destination varchar2(20) unique,
+distance number(10,2))
+/

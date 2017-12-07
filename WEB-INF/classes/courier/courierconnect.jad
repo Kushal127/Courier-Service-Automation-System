@@ -1,0 +1,45 @@
+// Decompiled by DJ v3.5.5.77 Copyright 2003 Atanas Neshkov  Date: 3/4/2001 1:17:47 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   courierconnect.java
+
+package courier;
+
+import java.io.PrintStream;
+import java.sql.*;
+
+public class courierconnect
+{
+
+    public courierconnect()
+    {
+        pst = null;
+        st = null;
+        rs = null;
+    }
+
+    public Connection mycon()
+    {
+        try
+        {
+            Class.forName("oracle.jdbc.driver.OracleDriver");
+            con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:india", "courier", "courier");
+        }
+        catch(SQLException sqlexception)
+        {
+            sqlexception.printStackTrace();
+            System.out.println("Sql exception......");
+        }
+        catch(Exception exception)
+        {
+            exception.printStackTrace();
+            System.out.println("Generic exception------");
+        }
+        return con;
+    }
+
+    public Connection con;
+    public PreparedStatement pst;
+    public Statement st;
+    public ResultSet rs;
+}

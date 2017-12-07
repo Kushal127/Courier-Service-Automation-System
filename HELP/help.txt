@@ -1,0 +1,79 @@
+Steps for running this program
+----------------------------------------
+A. DATABASE:
+---------------------
+creation of user
+=================
+  create user courier identified by courier;
+ 
+grant connect,resource to courier;
+  
+connect courier/courier;
+
+ Copy the tables and paste it into the sql> prompt of  courier/courier
+     so that you will get all table structures in courier user;
+
+
+If you run the project, the data you are entering on the screens will automatically inserted.
+
+B. DSN(Data Source Name):
+--------------------------------------
+
+1. To run this project we need to create a DSN with the name "courier".
+     DSN is required to establish a connection between oracle database and JAVA program.
+
+2. To create DSN follow the path:
+	Start -> Settings -> Controlpannel -> Administrative tools -> Data sources
+	click on ADD button.
+		select "ODBC for ORACLE Driver "
+		click Finish button
+		enter DSN name as "courier"
+		enter the hostname if required
+		click OK button
+	click on OK button
+    Datasource will be created.
+
+
+
+
+
+c. Deployment:
+---------------------
+
+ Place the courier1 folder in the following directory
+	for TOMCAT (Web server):
+	------------------------------------
+	c:\tomcat4.1\webapps\
+	
+	for WEBLOGIC (Application server):
+	--------------------------------------------------
+	c:\bea\weblogic700\samples\server\config\examples\applications
+
+d. Run the webserver or application server as follows:
+------------------------------------------------------------------------
+	for TOMCAT:
+	-------------------
+	c:\tomcat4.1\bin\startup.bat
+	
+	for WEBLOGIC:
+	----------------------
+	c:\bea\weblogic700\samples\server\config\examples\startexamplesserver.cmd
+
+e. Execution of the program:
+--------------------------------------
+	Type the following on Internet Explorer
+	for TOMCAT:
+	-------------------
+	http://localhost/8080:courier
+	
+	for WEBLOGIC:
+	-------------------
+	http://localhost/7001:courier
+	
+	
+
+G. Login window appears.Now you can proceed with the project.
+
+
+
+

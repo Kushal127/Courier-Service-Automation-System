@@ -1,0 +1,6 @@
+create table pricedetails(
+quantity number(12,2),
+source varchar2(20),
+destination varchar2(20),
+price number(12,2))
+/

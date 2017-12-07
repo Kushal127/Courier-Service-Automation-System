@@ -1,0 +1,7 @@
+create table source_destni(
+source varchar2(30),
+souradd varchar2(50),
+dest varchar2(30),
+destadd varchar2(50),
+dist number(12,2))
+/

@@ -1,0 +1,19 @@
+create table transaction(
+odate date,
+transid number(8) primary key,
+empid number(10),
+source varchar2(30),
+sname varchar2(20),
+sadd varchar2(20),
+sphone number(10),
+dest varchar2(30),
+rname varchar2(20),
+radd varchar2(20),
+rphone number(10),
+quantity number(10,2),
+itype varchar2(20),
+icost number(12,2),
+distance number(8),
+total number(12,2),
+foreign key (empid) references employee (empid))
+/
